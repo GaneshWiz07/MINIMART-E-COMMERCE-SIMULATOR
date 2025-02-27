@@ -1,3 +1,5 @@
+**LIVE SITE:**[https://minimart-scja.onrender.com](https://minimart-scja.onrender.com)
+
 # MINIMART E-COMMERCE APP(Simulation)
 
 A modern, lightweight e-commerce application built with React and TypeScript, featuring client-side state management.
