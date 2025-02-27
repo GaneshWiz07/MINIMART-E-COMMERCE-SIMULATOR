@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-[#FFB2E6] to-[#72DDF7];
+  }
+}
+
+@layer components {
+  .hero-section {
+    @apply min-h-[60vh] flex items-center justify-center bg-gradient-to-r from-[#F7AEF8] via-[#B388EB] to-[#72DDF7] mb-12;
+    animation: fadeIn 1s ease-out;
+  }
+  .hero-content {
+    @apply text-center text-white p-8;
+    animation: fadeIn 1.2s ease-out 0.3s backwards;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  .hero-title {
+    @apply text-5xl font-bold mb-4;
+    background: linear-gradient(to right, #ffb2e6, #9a52ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .hero-subtitle {
+    @apply text-xl mb-8;
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  }
+  .card {
+    @apply bg-white/20 backdrop-blur-md rounded-xl shadow-lg p-6 transition-all duration-300;
+    animation: fadeIn 0.6s ease-out;
+  }
+  .card h2,
+  .card h3,
+  .card p,
+  .card li {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  }
+  .sticky-nav {
+    @apply fixed top-0 left-0 right-0 z-50 transform transition-all duration-300 bg-gradient-to-r from-[#FFB2E6]/90 via-[#9A52FF]/90 to-[#72DDF7]/90 backdrop-blur-md shadow-lg;
+    transform: translateY(0);
+  }
+  .sticky-nav a {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@layer components {
+  .hero-section {
+    @apply min-h-[60vh] flex items-center justify-center bg-gradient-to-r from-[#F7AEF8] via-[#B388EB] to-[#72DDF7] mb-12;
+    animation: fadeIn 1s ease-out;
+  }
+  .hero-content {
+    @apply text-center text-white p-8;
+    animation: fadeIn 1.2s ease-out 0.3s backwards;
+  }
+  .hero-title {
+    @apply text-5xl font-bold mb-4;
+    background: linear-gradient(to right, #ffb2e6, #9a52ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero-subtitle {
+    @apply text-xl text-[#E382F9] mb-8;
+  }
+  .btn {
+    @apply px-6 py-3 rounded-full font-medium transition-all duration-300 transform;
+  }
+  .btn:hover {
+    @apply scale-105;
+    animation: bounce 0.4s ease;
+  }
+  .btn-primary {
+    @apply btn bg-gradient-to-r from-[#9A52FF] to-[#8447FF] text-white hover:shadow-lg hover:from-[#8447FF] hover:to-[#9A52FF];
+  }
+  .btn-secondary {
+    @apply btn bg-white/10 backdrop-blur-md text-white border-2 border-[#F7AEF8] hover:bg-white/20;
+  }
+  .btn-danger {
+    @apply btn bg-gradient-to-r from-red-500 to-pink-500 text-white hover:shadow-lg;
+  }
+  .input {
+    @apply w-full px-4 py-3 border-2 border-[#E382F9] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9A52FF] focus:border-transparent transition-all duration-200 bg-white/5 backdrop-blur-sm text-white;
+  }
+  .card {
+    @apply bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-6 transition-all duration-300;
+    animation: fadeIn 0.6s ease-out;
+  }
+  .card h2 {
+    @apply text-white font-semibold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  .card h3 {
+    @apply text-white font-semibold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  .card p {
+    @apply text-white/90;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  }
+  .card:hover {
+    @apply shadow-xl transform -translate-y-1 bg-white/20;
+  }
+  .card img {
+    @apply transition-transform duration-300 rounded-lg;
+  }
+  .card:hover img {
+    @apply transform scale-105;
+  }
+  .loading-spinner {
+    @apply inline-block w-8 h-8 border-4 border-[#72DDF7] border-t-transparent rounded-full;
+    animation: spin 1s linear infinite;
+  }
+  .notification {
+    @apply fixed top-4 right-4 p-4 rounded-lg shadow-lg transform transition-all duration-300 bg-gradient-to-r from-[#9A52FF] to-[#72DDF7] text-white;
+    animation: slideIn 0.3s ease-out;
+  }
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .sticky-nav {
+    @apply fixed top-0 left-0 right-0 z-50 transform transition-all duration-300 bg-gradient-to-r from-[#FFB2E6]/90 via-[#9A52FF]/90 to-[#72DDF7]/90 backdrop-blur-md shadow-lg;
+    transform: translateY(0);
+  }
+  .sticky-nav.hidden {
+    transform: translateY(0);
+  }
+  .sticky-nav.visible {
+    transform: translateY(0);
+  }
+  .btn-edit {
+    @apply btn bg-gradient-to-r from-[#72DDF7] to-[#B388EB] text-white shadow-md hover:shadow-lg hover:from-[#B388EB] hover:to-[#72DDF7] transform transition-all duration-300;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+}
