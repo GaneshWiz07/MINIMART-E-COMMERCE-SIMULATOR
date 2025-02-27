@@ -1,6 +1,6 @@
 # MINIMART E-COMMERCE APP(Simulation)
 
-A modern, lightweight e-commerce application built with the MERN stack (React + TypeScript frontend, Express.js backend).
+A modern, lightweight e-commerce application built with React and TypeScript, featuring client-side state management.
 
 ## Features
 
@@ -12,7 +12,6 @@ A modern, lightweight e-commerce application built with the MERN stack (React + 
 
 ## Tech Stack
 
-### Frontend
 - React 18 with TypeScript
 - Vite for build tooling
 - TailwindCSS for styling
@@ -20,26 +19,16 @@ A modern, lightweight e-commerce application built with the MERN stack (React + 
 - React Hot Toast for notifications
 - HeadlessUI and HeroIcons for UI components
 
-### Backend
-- Express.js
-- CORS for cross-origin resource sharing
-- Morgan for HTTP request logging
-
 ## Project Structure
 
 ```
-├── frontend/                # Frontend application
-│   ├── src/
-│   │   ├── components/     # Reusable UI components
-│   │   ├── contexts/       # React Context providers
-│   │   ├── pages/         # Page components
-│   │   └── main.tsx       # Application entry point
-│   ├── public/            # Static assets
-│   └── package.json       # Frontend dependencies
-└── backend/               # Backend application
-    ├── src/
-    │   └── index.js       # Server entry point
-    └── package.json       # Backend dependencies
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── contexts/       # React Context providers
+│   ├── pages/         # Page components
+│   └── main.tsx       # Application entry point
+├── public/            # Static assets
+└── package.json       # Frontend dependencies
 ```
 
 ## Setup Instructions
@@ -49,15 +38,12 @@ A modern, lightweight e-commerce application built with the MERN stack (React + 
    ```bash
    npm install
    ```
-3. Start the development servers:
+3. Start the development server:
    ```bash
    npm run dev
    ```
-   This will start both frontend and backend servers concurrently.
 
-### Environment Setup
-- Frontend runs on port 3000
-- Backend runs on default port
+The application will run on port 3000 by default.
 
 ## Features Documentation
 
@@ -136,8 +122,8 @@ To build the application for production:
 npm run build
 ```
 
-To start the production server:
+To preview the production build locally:
 ```bash
-npm start
+npm run preview
 ```
 
