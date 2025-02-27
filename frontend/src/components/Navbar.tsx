@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ShoppingCartIcon, Cog6ToothIcon } from "@heroicons/react/24/outline";
 
 const Navbar: React.FC = () => {
   return (
