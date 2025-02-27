@@ -141,6 +141,3 @@ To start the production server:
 npm start
 ```
 
-## License
-
-ISC License
